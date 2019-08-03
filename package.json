@@ -1,7 +1,7 @@
 {
   "name": "zilliqa-unstoppabledomains",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "namicorn": "^0.2.23",
+    "vue": "^2.6.10",
+    "vuesax": "^3.9.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",

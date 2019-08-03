@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar />
+    <Header />
+    <Info />
+    <Faq />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Namicorn from 'namicorn';
+import NavBar from './components/NavBar'
+import Header from './blocks/Header'
+import Info from './blocks/Info'
+import Faq from './blocks/Faq'
+import Footer from './blocks/Footer'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    NavBar,
+    Header,
+    Info,
+    Faq,
+    Footer
+  },
+  data() {
+    return {
+      namicorn: new Namicorn({ blockchain: false })
+    };
+  },
+  mounted() {
+    this.namicorn.resolve('test.zil').then(console.log);
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
 </style>
