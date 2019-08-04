@@ -1,21 +1,30 @@
 <template>
-  <div class="input">
+  <form class="input" @submit.prevent="submit">
     <input class="input__text"
            type="text"
-           :placeholder="placeholder">
-    <div class="input__btn-icon">
+           :value="value"
+           :placeholder="placeholder"
+           @input="$emit('input', $event.target.value)">
+    <div class="input__btn-icon"
+         @click="submit">
       <span class="input__icon">
           <svg height="40" viewBox="0 0 40 40" width="40"><path d="m32.6397148 29.8112877 10.7744988 10.7744987-2.8284272 2.8284272-10.7744987-10.7744988c-2.7093674 2.106122-6.1138648 3.3602852-9.8112877 3.3602852-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16c0 3.6974229-1.2541632 7.1019203-3.3602852 9.8112877zm-12.6397148 2.1887123c6.627417 0 12-5.372583 12-12s-5.372583-12-12-12-12 5.372583-12 12 5.372583 12 12 12z" fill="#7b7a9c" fill-opacity="0.301403" fill-rule="evenodd" transform="translate(-4 -4)"></path></svg>
       </span>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: 'Input',
   props: {
-    placeholder: String
+    placeholder: String,
+    value: String
+  },
+  methods: {
+    submit() {
+      this.$emit('submit');
+    }
   }
 }
 </script>

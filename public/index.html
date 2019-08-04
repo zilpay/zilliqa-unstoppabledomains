@@ -5,13 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="<%= BASE_URL %>main.css">
     <title>zilliqa-unstoppabledomains</title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but zilliqa-unstoppabledomains doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+
+    <figure id="spiner">
+      <div></div><div></div>
+      <div></div><div></div>
+      <div></div><div></div>
+      <div></div><div></div>
+    </figure>
+
+    <div id="app" class="is-load"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

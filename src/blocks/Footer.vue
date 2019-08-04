@@ -31,6 +31,10 @@ export default {
         {
           title: 'unstoppabledomains',
           href: 'https://unstoppabledomains.com'
+        },
+        {
+          title: 'contract',
+          href: 'https://viewblock.io/zilliqa/address/zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz?tab=code'
         }
       ]
     };
@@ -51,7 +55,6 @@ export default {
 .footer__items {
   display: flex;
   margin-top: 10vh;
-  list-style: none;
 }
 .footer__item {
   margin-left: 5vh;
