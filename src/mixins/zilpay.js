@@ -21,7 +21,7 @@ export default {
     async claimZone(value) {
       const isZilPay = this.isZilPay();
 
-      if (isZilPay < 4) {
+      if (isZilPay < 4 && process.env.NODE_ENV === 'prodaction') {
         return null;
       }
 
