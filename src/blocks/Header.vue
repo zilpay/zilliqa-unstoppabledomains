@@ -129,11 +129,11 @@ export default {
 }
 .header__alert {
   margin-top: 30px;
-  width: 100%;
+  width: 50%;
 }
 .header__alert_buy {
   text-align: center;
-  width: 70%;
+  width: 50%;
 }
 .alert__btn {
   margin-bottom: 10px;
