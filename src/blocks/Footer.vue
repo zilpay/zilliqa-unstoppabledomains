@@ -6,7 +6,9 @@
             v-for="item of items"
             :key="item.title">
           <a :href="item.href" target="_blanck">
-            {{item.title}}
+            <img :src="item.icon"
+                 height="40"
+                 class="footer__item-icon">
           </a>
         </li>
       </ul>
@@ -21,20 +23,20 @@ export default {
     return {
       items: [
         {
-          title: 'github',
-          href: 'https://github.com/zilpay'
+          href: 'https://github.com/zilpay/zilliqa-unstoppabledomains',
+          icon: '/icons/github-logo.svg'
         },
         {
-          title: 'ZilPay',
-          href: 'https://zilpay.xyz/'
+          href: 'https://zilpay.xyz/',
+          icon: '/icons/zilpay.svg'
         },
         {
-          title: 'unstoppabledomains',
-          href: 'https://unstoppabledomains.com'
+          href: 'https://unstoppabledomains.com',
+          icon: '/icons/unstoppable-logo.svg'
         },
         {
-          title: 'contract',
-          href: 'https://viewblock.io/zilliqa/address/zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz?tab=code'
+          href: 'https://viewblock.io/zilliqa/address/zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz?tab=code',
+          icon: '/icons/viewblock-dark.png'
         }
       ]
     };
@@ -64,6 +66,7 @@ export default {
 }
 @media only screen and (max-width: 700px) {
   .footer__items {
+    margin: 10px;
     flex-direction: column;
     text-align: center;
   }

@@ -45,7 +45,7 @@ import Button from '../components/Button'
 import ZilPayMixin from '../mixins/zilpay'
 import { log } from 'util';
 
-const namicorn = new Namicorn({ blockchain: false });
+const namicorn = new Namicorn({ blockchain: true });
 
 export default {
   name: 'Header',
@@ -161,7 +161,7 @@ export default {
     width: 100%;
   }
   .alert__btn {
-  width: 100px;
-}
+    width: 100px;
+  }
 }
 </style>

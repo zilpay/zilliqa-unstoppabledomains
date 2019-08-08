@@ -2,7 +2,7 @@ export default {
   data() {
     return {
       account: null,
-      contractAddress: 'zil1nuq6uxxn73925uqzq73rs3sg4qytx2z6emerwd'
+      contractAddress: 'zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz'
     };
   },
   methods: {
@@ -38,9 +38,9 @@ export default {
       this.account = window.zilPay.wallet.defaultAccount;
 
       return await contract.call(
-        'claimZone', [
+        'register', [
           {
-            vname: "new_owner",
+            vname: "parent",
             type: "ByStr32",
             value: this.account.base16
           },

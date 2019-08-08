@@ -5,20 +5,24 @@
         Replace cryptocurrency addresses
         with a human readable name
       </h1>
-      <div class="info__illustration-1">
-        <img src="/img/illustration-1.png" class="info__illustration">
-      </div>
-      <div class="info__illustration-2">
-        <img src="/img/illustration-2.png" class="info__illustration">
+      <div class="info__illustration">
+        <div class="info__illustration-1">
+          <img src="/img/illustration-1.png" class="info__illustration-img">
+        </div>
+        <div class="info__illustration-2">
+          <img src="/img/illustration-2.png" class="info__illustration-img">
+        </div>
       </div>
       <h1 class="info__title">
         Launch Uncensorable Websites
       </h1>
-      <div class="info__illustration-3">
-        <img src="/img/illustration-3.png" class="info__illustration">
-      </div>
-      <div class="info__illustration-4">
-        <img src="/img/illustration-4.png" class="info__illustration">
+      <div class="info__illustration">
+        <div class="info__illustration-3">
+          <img src="/img/illustration-3.png" class="info__illustration-img">
+        </div>
+        <div class="info__illustration-4">
+          <img src="/img/illustration-4.png" class="info__illustration-img">
+        </div>
       </div>
     </div>
   </div>
@@ -50,6 +54,9 @@ export default {
   line-height: 44px;
 }
 .info__illustration {
+  display: flex;
+}
+.info__illustration-img {
   max-height: 400px;
 }
 .info__illustration-2,
@@ -58,5 +65,10 @@ export default {
 }
 .info__illustration-4 {
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 800px) {
+  .info__illustration {
+    flex-direction: column;
+  }
 }
 </style>
